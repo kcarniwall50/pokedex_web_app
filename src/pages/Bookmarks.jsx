@@ -7,6 +7,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 const Bookmarks = () => {
   const [savedPokemons, setSavedPokemos] = useState([]);
   const navigate = useNavigate();
+
   useEffect(() => {
     let cartArray = JSON.parse(localStorage.getItem("bookmarkedCart"));
     setSavedPokemos(cartArray);
@@ -59,7 +60,7 @@ const Bookmarks = () => {
 
       <h4 style={{ color: "blue", margin: "1rem 0" }}>Bookmarks</h4>
 
-      {(savedPokemons?.length < 1 && <p>You have not saved any Pokemon</p>)}
+      {(savedPokemons?.length === 0  || savedPokemons === null ) && <p>You have not saved any Pokemon</p>}
       <div className="bookmark-container">
         {savedPokemons &&
           savedPokemons.map((Pokemon, key) => (
