@@ -118,6 +118,20 @@ body {
   margin-inline: auto;
 }
 
+.navlink {
+  display: flex;
+  justify-content: left;
+  padding: 0.4rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  font-family: cursive;
+}
+
+.navlink:active {
+  color: rgb(29, 29, 47);
+}
+
 /* for search container */
 @media screen and (max-width: 350px) {
   .search-container {

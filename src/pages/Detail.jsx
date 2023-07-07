@@ -87,17 +87,8 @@ const Detail = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <NavLink
+      <NavLink  className="navlink"
         to="/"
-        style={{
-          display: "flex",
-          justifyContent: "left",
-          padding: "0.4rem",
-          alignItems: "center",
-          marginTop: "0.5rem",
-          textDecoration: "none",
-          fontFamily: "cursive",
-        }}
       >
         <h2>Pokédex</h2>
       </NavLink>

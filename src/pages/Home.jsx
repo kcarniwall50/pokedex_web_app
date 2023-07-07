@@ -48,13 +48,9 @@ const Home = () => {
   }, []);
 
   const Reset = () => {
-    setSearchText(() => "");
+    setSearchText("");
     setIsSearched(false);
   };
-
-  useEffect(() => {
-    Reset();
-  }, [isSearched]);
 
   const search = async () => {
     if (!searchText) return alert("Please enter name or number");
@@ -65,14 +61,13 @@ const Home = () => {
         `https://pokeapi.co/api/v2/pokemon/${searchText}`
       );
       setIsLoading(false);
+      setIsSearched(true);
       console.log(response);
 
       setSearchedPokemon(response.data);
     } catch (error) {
       setIsLoading(false);
-
       Reset();
-
       if (error.response.status === 404) {
         alert("Not Found 😔!.  Please enter valid lowercase name or number");
       } else {
@@ -80,8 +75,6 @@ const Home = () => {
       }
       console.log(error);
     }
-
-    setIsSearched(true);
   };
 
   useEffect(() => {

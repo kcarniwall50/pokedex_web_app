@@ -43,24 +43,15 @@ const Bookmarks = () => {
 
   return (
     <>
-      <NavLink
-        to="/"
-        style={{
-          display: "flex",
-          justifyContent: "left",
-          padding: "0.4rem",
-          alignItems: "center",
-          margin: "1rem 0",
-          textDecoration: "none",
-          fontFamily: "cursive",
-        }}
-      >
+      <NavLink className="navlink" to="/">
         <h2>Pokédex</h2>
       </NavLink>
 
       <h4 style={{ color: "blue", margin: "1rem 0" }}>Bookmarks</h4>
 
-      {(savedPokemons?.length === 0  || savedPokemons === null ) && <p>You have not saved any Pokemon</p>}
+      {(savedPokemons?.length === 0 || savedPokemons === null) && (
+        <p>You have not saved any Pokemon</p>
+      )}
       <div className="bookmark-container">
         {savedPokemons &&
           savedPokemons.map((Pokemon, key) => (
