@@ -69,7 +69,7 @@ const Home = () => {
       setIsLoading(false);
       if (error.response.status === 404)
         alert("Not Found 😔!.  Please enter valid lowercase name or number");
-        setSearchText(() => "");
+        setSearchText('');
         setIsSearched(false);
 
       console.log(error);

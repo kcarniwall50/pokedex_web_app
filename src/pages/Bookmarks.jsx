@@ -59,8 +59,7 @@ const Bookmarks = () => {
 
       <h4 style={{ color: "blue", margin: "1rem 0" }}>Bookmarks</h4>
 
-      {!savedPokemons ||
-        (savedPokemons.length === 0 && <p>You have not saved any Pokemon</p>)}
+      {(savedPokemons.length < 1 && <p>You have not saved any Pokemon</p>)}
       <div className="bookmark-container">
         {savedPokemons &&
           savedPokemons.map((Pokemon, key) => (
