@@ -47,11 +47,14 @@ const Home = () => {
     window.addEventListener("scroll", handleInfiniteScroll);
   }, []);
 
-  
   const Reset = () => {
     setSearchText(() => "");
     setIsSearched(false);
   };
+
+  useEffect(() => {
+    Reset();
+  }, [isSearched]);
 
   const search = async () => {
     if (!searchText) return alert("Please enter name or number");
@@ -67,19 +70,19 @@ const Home = () => {
       setSearchedPokemon(response.data);
     } catch (error) {
       setIsLoading(false);
-      if (error.response.status === 404)
-      {
-        setSearchText('');
-        setIsSearched(false);
+
+      Reset();
+
+      if (error.response.status === 404) {
         alert("Not Found 😔!.  Please enter valid lowercase name or number");
-       
+      } else {
+        alert(error?.message);
       }
       console.log(error);
     }
 
     setIsSearched(true);
   };
-
 
   useEffect(() => {
     window.onscroll = function () {
