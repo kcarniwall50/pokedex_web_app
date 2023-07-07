@@ -20,7 +20,7 @@ const Detail = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/${id}`
+          `https://pokeapi.co/api/v2/pokemon/${id}`, { withCredentials: true }
         );
         setIsLoading(false);
 

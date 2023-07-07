@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  if (process.env.REACT_APP_NODE_ENV === "production") {
+  if (process.env.REACT_APP_NODE_ENV !== "production") {
     console.log = function () {};
   }
 

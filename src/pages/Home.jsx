@@ -47,6 +47,12 @@ const Home = () => {
     window.addEventListener("scroll", handleInfiniteScroll);
   }, []);
 
+  
+  const Reset = () => {
+    setSearchText(() => "");
+    setIsSearched(false);
+  };
+
   const search = async () => {
     if (!searchText) return alert("Please enter name or number");
 
@@ -63,16 +69,14 @@ const Home = () => {
       setIsLoading(false);
       if (error.response.status === 404)
         alert("Not Found 😔!.  Please enter valid lowercase name or number");
+        Reset()
+
       console.log(error);
     }
 
     setIsSearched(true);
   };
 
-  const Reset = () => {
-    setSearchText(() => "");
-    setIsSearched(false);
-  };
 
   useEffect(() => {
     window.onscroll = function () {
