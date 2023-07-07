@@ -68,10 +68,12 @@ const Home = () => {
     } catch (error) {
       setIsLoading(false);
       if (error.response.status === 404)
-        alert("Not Found 😔!.  Please enter valid lowercase name or number");
+      {
         setSearchText('');
         setIsSearched(false);
-
+        alert("Not Found 😔!.  Please enter valid lowercase name or number");
+       
+      }
       console.log(error);
     }
 
