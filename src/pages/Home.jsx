@@ -107,24 +107,32 @@ const Home = () => {
       {isLoading && <Loader />}
       <a name="top"></a>
       <div
-        style={{ padding: "1rem", boxShadow: "2px 3px grey", width: "100%" }}
+        style={{
+          paddingBottom: "1.2rem",
+          width: "100%",
+          marginBottom: "1.3rem",
+          boxShadow:
+            "0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19)",
+          backgroundColor: "#cee2f4",
+          borderRadius: "0px 0px  3rem  3rem",
+        }}
       >
-        <span style={{ display: "flex", justifyContent: "flex-start" }}>
-          <NavLink
-            to="/"
-            style={{
-              textDecoration: "none",
-              fontFamily: "cursive",
-              marginBottom: "1rem",
-            }}
-          >
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            marginLeft: "1rem",
+          }}
+        >
+          <NavLink className="navlink" to="/">
             {" "}
-            <h2 style={{ color: "blue" }}>Pokédex</h2>
+            <h2>Pokédex</h2>
           </NavLink>
         </span>
         <div className="search-container">
           <div>
             <input
+              className="effect"
               type="text"
               value={searchText}
               placeholder="search by name or number"
@@ -135,6 +143,7 @@ const Home = () => {
 
           <div>
             <input
+              className="effect"
               type="submit"
               value="Search"
               onClick={search}
@@ -148,6 +157,7 @@ const Home = () => {
 
           <div>
             <input
+              className="effect"
               type="reset"
               value="Reset"
               onClick={Reset}
@@ -183,7 +193,7 @@ const Home = () => {
               className="moreDetail"
               onClick={() => imageClickHandler(searchedPokemon?.id)}
             >
-              more details
+              more detail..
             </p>
           </div>
         </div>
@@ -210,12 +220,18 @@ const Home = () => {
                   style={{
                     margin: "0 0.2rem 0.4rem 0.2rem",
                     backgroundColor: "#82c4f7",
-                    padding: "0.7rem",
-                    borderRadius: "8px",
+                    // padding: "0.7rem",
+                    // borderRadius: "8px",
+
+                    border: "1px solid #008b8b",
+                    borderRadius: "0.5rem",
+                    boxShadow:
+                      " 0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19)",
+                    padding: "0.5rem",
                   }}
                   key={key}
                 >
-                  <div onClick={() => imageClickHandler(key + 1)}>
+                  <div onClick={() => imageClickHandler(key + 1)} style={{}}>
                     <img
                       src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${
                         key + 1
@@ -241,7 +257,7 @@ const Home = () => {
                       className="moreDetail"
                       onClick={() => imageClickHandler(key + 1)}
                     >
-                      more details
+                      more detail..
                     </p>
                   </div>
                 </div>

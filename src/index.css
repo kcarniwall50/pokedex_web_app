@@ -6,7 +6,8 @@
 
 body {
   text-align: center;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
+  font-family: sans-serif;
 }
 
 .toast-position {
@@ -21,10 +22,12 @@ body {
 .search-img {
   margin: 1rem 0.3rem;
   background-color: #82c4f7;
-  padding: 0.7rem;
-  border-radius: 8px;
   width: 50%;
   margin-inline: auto;
+  border: 1px solid #008b8b;
+  border-radius: 0.5rem;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19);
+  padding:0.5rem;
 }
 
 #myBtn {
@@ -121,15 +124,24 @@ body {
 .navlink {
   display: flex;
   justify-content: left;
-  padding: 0.4rem;
+  padding: 0.5rem;
   align-items: center;
   margin-top: 0.5rem;
   text-decoration: none;
   font-family: cursive;
+  border-radius: 0.5rem;
+  box-shadow:0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 
 .navlink:active {
   color: rgb(29, 29, 47);
+}
+
+.effect{
+  border: 1px solid #008b8b;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19);
+    padding:1rem;
 }
 
 /* for search container */

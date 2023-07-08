@@ -43,11 +43,20 @@ const Bookmarks = () => {
 
   return (
     <>
-      <NavLink className="navlink" to="/">
-        <h2>Pokédex</h2>
-      </NavLink>
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          marginLeft: "1rem",
+        }}
+      >
+        <NavLink className="navlink" to="/" title="got to Home Page">
+          {" "}
+          <h2>Pokédex</h2>
+        </NavLink>
+      </span>
 
-      <h4 style={{ color: "blue", margin: "1rem 0" }}>Bookmarks</h4>
+      <h3 style={{ color: "blue", margin: "1rem 0" }}>Bookmarked Pokemons</h3>
 
       {(savedPokemons?.length === 0 || savedPokemons === null) && (
         <p>You have not saved any Pokemon</p>
@@ -57,6 +66,7 @@ const Bookmarks = () => {
           savedPokemons.map((Pokemon, key) => (
             <div
               key={key}
+              className="effect"
               style={{
                 display: "flex",
                 justifyContent: "space-around",

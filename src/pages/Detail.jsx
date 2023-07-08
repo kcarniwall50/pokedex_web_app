@@ -87,19 +87,32 @@ const Detail = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <NavLink  className="navlink"
-        to="/"
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          marginLeft: "1rem",
+        }}
       >
-        <h2>Pokédex</h2>
-      </NavLink>
+        <NavLink className="navlink" to="/" title="got to Home Page">
+          {" "}
+          <h2>Pokédex</h2>
+        </NavLink>
+      </span>
       <div className=" detail-container  display">
         <div>
           <img
+            className="effect"
             src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}
             alt="Loading..."
+            style={{
+              border: "0px solid",
+              padding: "1rem",
+              borderRadius: "20%",
+            }}
           />
         </div>
-        <div>
+        <div className="effect">
           <div className="name">
             <AiFillHeart
               color={colour}
