@@ -89,7 +89,7 @@ const Detail = () => {
       {isLoading && <Loader />}
       <div
      style={{
-      paddingBottom: "3rem",
+      paddingBottom: "2rem",
       width: "100%",
       marginBottom: "1.3rem",
       boxShadow:
@@ -112,6 +112,15 @@ const Detail = () => {
           <h2>Pokédex</h2>
         </NavLink>
       </span>
+
+      <div className="search-container">
+     <span 
+     style={{
+      boxShadow:" inset rgba(0, 0, 0, 0.3) 0px 1px 7px 8px, rgba(0, 0, 0, 0.19) -2px 9px 20px 0px inset",
+      // boxShadow:"2px 1px 14px 0px rgba(0,0,0,.3), inset -2px 9px 20px 0 rgba(0,0,0,.19)",
+     fontWeight:'bolder', padding:'0.38rem', textTransform:'capitalize', marginBottom:'-1.3rem', color:'blue', fontFamily:'monospace', fontSize:'20px', borderRadius:'5px' }}
+     >{Pokemon?.name}</span> 
+          </div>
 
       </div>
       <div className=" detail-container  display">

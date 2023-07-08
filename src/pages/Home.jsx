@@ -102,6 +102,10 @@ const Home = () => {
     navigate(`/detail/${number}`);
   };
 
+  const goToHome = () => {
+    Reset();
+  };
+
   return (
     <>
       {isLoading && <Loader />}
@@ -118,13 +122,14 @@ const Home = () => {
         }}
       >
         <span
+          onClick={goToHome}
           style={{
             display: "flex",
             justifyContent: "flex-start",
             marginLeft: "1rem",
           }}
         >
-          <NavLink className="navlink" to>
+          <NavLink className="navlink">
             {" "}
             <h2>Pokédex</h2>
           </NavLink>
@@ -185,7 +190,7 @@ const Home = () => {
                 color: "white",
                 margin: "0.4rem 0",
                 fontWeight: "bold",
-                textTransform:'capitalize'
+                textTransform: "capitalize",
               }}
             >
               {searchedPokemon?.name}
@@ -250,7 +255,7 @@ const Home = () => {
                         color: "white",
                         margin: "0.4rem 0",
                         fontWeight: "bold",
-                        textTransform:'capitalize'
+                        textTransform: "capitalize",
                       }}
                     >
                       {Pokemon?.name}

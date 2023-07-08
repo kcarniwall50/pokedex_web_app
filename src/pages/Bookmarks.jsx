@@ -45,7 +45,7 @@ const Bookmarks = () => {
     <>
     <div
      style={{
-      paddingBottom: "3rem",
+      paddingBottom: "2.95rem",
       width: "100%",
       marginBottom: "1.3rem",
       boxShadow:
