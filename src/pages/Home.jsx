@@ -58,7 +58,7 @@ const Home = () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${searchText}`
+        `https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`
       );
       setIsLoading(false);
       setIsSearched(true);
@@ -69,7 +69,7 @@ const Home = () => {
       setIsLoading(false);
       Reset();
       if (error.response.status === 404) {
-        alert("Not Found 😔!.  Please enter valid lowercase name or number");
+        alert("Not Found 😔!.  Please enter valid name or number");
       } else {
         alert(error?.message);
       }
