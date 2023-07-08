@@ -87,6 +87,19 @@ const Detail = () => {
   return (
     <>
       {isLoading && <Loader />}
+      <div
+     style={{
+      paddingBottom: "3rem",
+      width: "100%",
+      marginBottom: "1.3rem",
+      boxShadow:
+        "0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19)",
+      backgroundColor: "#cee2f4",
+      borderRadius: "0px 0px  3rem  3rem",
+    }}
+    >
+
+   
       <span
         style={{
           display: "flex",
@@ -99,6 +112,8 @@ const Detail = () => {
           <h2>Pokédex</h2>
         </NavLink>
       </span>
+
+      </div>
       <div className=" detail-container  display">
         <div>
           <img

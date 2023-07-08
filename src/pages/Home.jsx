@@ -10,7 +10,7 @@ const Home = () => {
   const [searchedPokemon, setSearchedPokemon] = useState();
   const [isSearched, setIsSearched] = useState(false);
   const [Pokemons, setPokemons] = useState([]);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
   const [isLoading, setIsLoading] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -124,7 +124,7 @@ const Home = () => {
             marginLeft: "1rem",
           }}
         >
-          <NavLink className="navlink" to="/">
+          <NavLink className="navlink" to>
             {" "}
             <h2>Pokédex</h2>
           </NavLink>
@@ -185,6 +185,7 @@ const Home = () => {
                 color: "white",
                 margin: "0.4rem 0",
                 fontWeight: "bold",
+                textTransform:'capitalize'
               }}
             >
               {searchedPokemon?.name}
@@ -249,6 +250,7 @@ const Home = () => {
                         color: "white",
                         margin: "0.4rem 0",
                         fontWeight: "bold",
+                        textTransform:'capitalize'
                       }}
                     >
                       {Pokemon?.name}
