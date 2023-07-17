@@ -110,17 +110,7 @@ const Home = () => {
     <>
       {isLoading && <Loader />}
       <a name="top"></a>
-      <div
-        style={{
-          paddingBottom: "1.2rem",
-          width: "100%",
-          marginBottom: "1.3rem",
-          boxShadow:
-            "0 8px 16px 0 rgba(0,0,0,.3), 0 6px 20px 0 rgba(0,0,0,.19)",
-          backgroundColor: "#cee2f4",
-          borderRadius: "0px 0px  3rem  3rem",
-        }}
-      >
+      <div className="header">
         <span
           onClick={goToHome}
           style={{

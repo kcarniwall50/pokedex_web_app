@@ -19,6 +19,27 @@ body {
   margin-top: 1rem;
 }
 
+.header {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#7fb73a),
+    to(rgb(157, 203, 221))
+  );
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  -moz-box-shadow: 0 8px 16px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  -webkit-box-shadow: 0 8px 16px 0 rgb(0 0 0 / 30%),
+    0 6px 20px 0 rgb(0 0 0 / 19%);
+  color: #454545;
+  text-shadow: 0 1px 0 white;
+  padding: 0.5rem 0rem 1.3rem 0.5rem;
+  border-bottom: 2px solid black;
+  border-radius: 0px 0px 3rem 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
 .search-img {
   margin: 1rem 0.3rem;
   background-color: #82c4f7;
@@ -130,7 +151,8 @@ body {
   text-decoration: none;
   font-family: cursive;
   border-radius: 0.5rem;
-  box-shadow: 4px 10px 16px 1px rgba(0,0,0,.3), inset -2px 9px 20px 0px rgba(0,0,0,.19);
+  box-shadow: 4px 10px 16px 1px rgba(0, 0, 0, 0.3),
+    inset -2px 9px 20px 0px rgba(0, 0, 0, 0.19);
   /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
